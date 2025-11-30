@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kruthi M | Cyber Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- AOS Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND GRID ================= */
+
+body::before{
+    content:'';
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+       linear-gradient(90deg, rgba(0,255,255,0.08) 1px, transparent 1px),
+       linear-gradient(rgba(0,255,255,0.08) 1px, transparent 1px);
+    background-size:40px 40px;
+    z-index:-2;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:radial-gradient(circle, transparent 0%, #000000ea 80%);
+    z-index:-1;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(0,255,255,0.2);
+    z-index:1000;
+}
+
+nav a{
+    color:#00eaff;
+    font-size:18px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+nav a:hover{
+    text-shadow:0 0 15px #00eaff;
+    transform:scale(1.2);
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    perspective:1000px;
+    position:relative;
+}
+
+.hero h1{
+    font-size:70px;
+    font-weight:800;
+    color:#00eaff;
+    text-shadow:0 0 25px #00eaff;
+    animation: glitch 1.8s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #ff00c8, -2px -2px #00eaff; }
+  50% { text-shadow: -2px 2px #ff00c8, 2px -2px #00eaff; }
+  100% { text-shadow: 2px -2px #ff00c8, -2px 2px #00eaff; }
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:22px;
+    opacity:0.85;
+}
+
+/* Parallax floating */
+.hero:hover{
+    transform:rotateX(6deg) rotateY(6deg);
+    transition:0.5s;
+}
+
+/* Neon Button */
+.cyber-btn{
+    margin-top:40px;
+    padding:15px 45px;
+    background:#00eaff;
+    color:#000;
+    border:none;
+    border-radius:40px;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 0 25px #00eaff;
+    transition:0.3s;
+}
+.cyber-btn:hover{
+    transform:scale(1.15);
+    box-shadow:0 0 50px #00eaff;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:120px 10%;
+}
+
+h2{
+    font-size:48px;
+    color:#00eaff;
+    margin-bottom:40px;
+    text-shadow:0 0 20px #00eaff;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:20px;
+    border:1px solid rgba(0,255,255,0.25);
+    backdrop-filter:blur(12px);
+    margin-bottom:25px;
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 25px #00eaff;
+}
+
+/* ================= SKILLS ================= */
+
+.skill-tag{
+    background:#00eaff;
+    color:#000;
+    padding:12px 22px;
+    border-radius:30px;
+    display:inline-block;
+    margin:10px;
+    font-weight:600;
+    box-shadow:0 0 15px #00eaff;
+    transition:0.3s;
+}
+.skill-tag:hover{
+    transform:scale(1.22);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:30px;
+    text-align:center;
+    background:#000;
+    color:#aaa;
+    border-top:1px solid rgba(0,255,255,0.3);
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav data-aos="fade-down">
+    <a href="#about">ABOUT</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#events">EVENTS</a>
+    <a href="#contact">CONTACT</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1 data-aos="zoom-in">KRUTHI M</h1>
+    <p data-aos="fade-up"> • Designer • Tech Explorer</p>
+    <button class="cyber-btn" onclick="location.href='#projects'" data-aos="fade-up">Explore My Work</button>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 data-aos="fade-right">About Me</h2>
+    <div class="card" data-aos="fade-up">
+        <p>
+            I am a Computer Science & Design student passionate about creating and learning powerful, modern,
+            and intelligent systems. I specialize in building full-stack platforms, automation,
+            assistive technology, and visually stunning UI/UX designs.
+        </p>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 data-aos="fade-left">Projects</h2>
+
+    <div class="card" data-aos="fade-up">
+        <h3>Smart Vision (AI + Safety)</h3>
+        <p>Unified live-stream platform with object, gesture & digit detection + real-time TTS safety alerts for visually impaired users.  
+       </p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+        <h3>College Database Management System</h3>
+        <p>Web platform to manage students, faculty, attendance, exams & results.  
+        </p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+        <h3>Student Resource Hub</h3>
+        <p>Study-material platform with login, uploads/downloads & AI chatbot.  
+        </p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+        <h3>Online Exam Interface</h3>
+        <p>Java-based MCQ exam interface with realtime scoring.  
+       </p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+        <h3>Email Slicer</h3>
+        <p>Python script to extract username + domain efficiently.  
+        </p>
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2 data-aos="zoom-in">Skills</h2>
+
+    <span class="skill-tag" data-aos="zoom-in">C</span>
+    <span class="skill-tag" data-aos="zoom-in">Java</span>
+    <span class="skill-tag" data-aos="zoom-in">Python</span>
+    <span class="skill-tag" data-aos="zoom-in">HTML</span>
+    <span class="skill-tag" data-aos="zoom-in">SQL</span>
+    <span class="skill-tag" data-aos="zoom-in">Bootstrap</span>
+    <span class="skill-tag" data-aos="zoom-in">VS Code</span>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+    <h2 data-aos="fade-right">Events & Participation</h2>
+
+    <div class="card" data-aos="fade-left">
+        <h3>Hackathons</h3>
+        <p>MCE Hassan – 6 Hour Hackathon  
+        </p>
+    </div>
+
+    <div class="card" data-aos="fade-left">
+        <h3>Industrial Visits</h3>
+        <p>BOSCH Vocational Center – IOT Training  
+        <br>SERC IISc Bangalore – HPC Systems  
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 data-aos="zoom-in">Contact</h2>
+
+    <div class="card" data-aos="fade-up">
+        <p><b>Email:</b> kruthimanjappa2006@gmail.com</p>
+        <p><b>Phone:</b> 6363358138</p>
+        <p><b>Location:</b> Shivamogga, Karnataka</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Kruthi M — All Rights Reserved
+</footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration:1100,
+    once:false
+});
+</script>
+
+</body>
+</html>
